@@ -9,6 +9,7 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
+  Image,
   View
 } from 'react-native';
 
@@ -16,15 +17,10 @@ class mobile extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Image style={styles.logo}
+          source={require('./public/images/tomato.png')} />
         <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
+          Hello World!
         </Text>
       </View>
     );
@@ -43,9 +39,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
+  logo: {
     marginBottom: 5,
   },
 });
