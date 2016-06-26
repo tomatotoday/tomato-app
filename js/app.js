@@ -13,10 +13,6 @@ class App extends Component {
   render() {
     return (
       <View style={ styles.container }>
-        <StatusBar
-          translucent={true}
-          backgroundColor='transparent'
-          barStyle='light-content'/>
         <ApplicationNavigator />
       </View>
     )
