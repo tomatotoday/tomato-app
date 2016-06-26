@@ -3,6 +3,7 @@
 import React from 'react'
 import { Component } from 'react'
 import { Provider } from 'react-redux'
+import { StatusBar } from 'react-native'
 import configureStore from './store/configure'
 import Router from './navigators/router'
 
@@ -26,6 +27,7 @@ function setup() {
     render() {
       return (
         <Provider store={ this.state.store }>
+            
           <Router />
         </Provider>
       )

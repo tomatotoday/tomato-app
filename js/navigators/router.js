@@ -1,4 +1,5 @@
 import React from 'react'
+import { StatusBar, View } from 'react-native'
 import {
   Actions,
   Router,
@@ -16,6 +17,14 @@ const scenes = Actions.create(
 
 export default class AppRouter extends React.Component {
   render() {
-    return <Router scenes={scenes} />
+    return (
+      <View>
+        <StatusBar
+         backgroundColor="#ff3333"
+         barStyle="default"
+       />
+      <Router scenes={scenes} />
+      </View>
+    )
   }
 }
