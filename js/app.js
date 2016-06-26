@@ -6,15 +6,18 @@ import { Component } from 'react'
 import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
 import { Text } from 'react-native'
+import ApplicationNavigator from './navigators/application'
 
 class App extends Component {
 
   render() {
     return (
-      <View  style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello World!
-        </Text>
+      <View style={ styles.container }>
+        <StatusBar
+          translucent={true}
+          backgroundColor='transparent'
+          barStyle='light-content'/>
+        <ApplicationNavigator />
       </View>
     )
   }
