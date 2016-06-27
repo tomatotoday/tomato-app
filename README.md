@@ -1,3 +1,12 @@
+Init
+=====
+
+Install react-native-cli, rnpm
+
+npm install
+
+rnpm link react-native-i18n
+
 Run test
 =========
 
