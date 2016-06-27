@@ -9,7 +9,7 @@ import {
     Image
 } from 'react-native'
 
-import NavigationBar from 'react-native-navbar'
+import NavigationBar from './navigation-bar'
 
 export default class AboutView extends Component{
   constructor(props) {
@@ -33,10 +33,12 @@ export default class AboutView extends Component{
     return (
       <View style={styles.container}>
         <NavigationBar
-          title={titleConfig}
-          tintColor={'#f33'}
-          leftButton={leftButtonConfig} />
-
+          centerTitle={'About Tomato'}
+          leftTitle={'Back'}
+          leftHandler={() => alert('hello')}
+          rightTitle={''}
+          rightHandler={() => nil}
+          />
       </View>
     )
   }
@@ -45,6 +47,5 @@ export default class AboutView extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 35,
   }
 })
