@@ -36,8 +36,6 @@ export default class AboutView extends Component{
           centerTitle={'About Tomato'}
           leftTitle={'Back'}
           leftHandler={() => alert('hello')}
-          rightTitle={''}
-          rightHandler={() => nil}
           />
       </View>
     )

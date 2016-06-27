@@ -7,8 +7,8 @@ import { StatusBar } from 'react'
 
 type Props = {
   centerTitle: string;
-  leftTitle: string;
-  rightTitle: string;
+  leftTitle: any;
+  rightTitle: any;
   leftHandler: any;
   rightHandler: any;
 };
@@ -16,7 +16,13 @@ type Props = {
 
 export default class NavBar extends Component {
 
-  constructor(props) {
+  constructor(props: Props = {
+    centerTitle: '',
+    leftTitle: '',
+    rightTitle: '',
+    leftHandler: () => nil,
+    rightHandler: () => nil,
+  }) {
     super(props)
     this.state = {
       statusTintColor: '#ffffff',
@@ -27,13 +33,17 @@ export default class NavBar extends Component {
   }
 
   render() {
-    const rightButtonConfig = {
+    const rightButtonConfig = this.props.rightTitle === undefined ? {
+      title: '',
+    } : {
       title: this.props.rightTitle,
       tintColor: this.state.buttonTintColor,
       handler: this.props.rightHandler,
     }
 
-    const leftButtonConfig = {
+    const leftButtonConfig = this.props.leftTitle === undefined ? {
+      title: '',
+    } : {
       title: this.props.leftTitle,
       tintColor: this.state.buttonTintColor,
       handler: this.props.leftHandler,
