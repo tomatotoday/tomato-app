@@ -23,10 +23,15 @@ export default class AboutView extends Component{
     return (
       <View style={styles.container}>
         <NavigationBar
-          centerTitle={I18n.t('about_tomato')}
+          centerTitle={I18n.t('aboutTomato')}
           leftTitle={I18n.t('back')}
           leftHandler={() => alert('hello')}
           />
+        <View style={styles.wrapper}>
+          <View style={styles.appNameView}>
+            <Text style={styles.appNameText}>{I18n.t('appName')}</Text>
+          </View>
+        </View>
       </View>
     )
   }
@@ -35,18 +40,36 @@ export default class AboutView extends Component{
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-  }
+  },
+  wrapper: {
+    marginTop: 35,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  appNameView: {
+    marginTop: 50,
+    backgroundColor: '#ffffff',
+  },
+  appNameText: {
+    fontSize: 20,
+  },
 })
 
 I18n.fallbacks = true;
 I18n.translations = {
   en: {
-    about_tomato: 'About Tomato',
+    aboutTomato: 'About Tomato',
     back: 'Back',
+    appName: 'Tomato',
+    appInfo: 'Email: help@tomato.today',
+    appCopyright: 'Copyright © 2016 tomato.today.',
   },
   zh: {
-    about_tomato: '关于番茄',
+    aboutTomato: '关于番茄',
     back: '返回',
+    appName: '番茄',
+    appInfo: '邮箱: help@tomato.today',
+    appCopyright: '版权 © 2016 tomato.today.',
   }
 }
 I18n.locale = 'zh'
