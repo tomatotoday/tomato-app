@@ -7,7 +7,7 @@ import {
   // Reducer,
 } from 'react-native-router-flux';
 
-import About from '../components/about'
+import About from '../views/about'
 
 const scenes = Actions.create(
   <Scene key="root" hideNavBar={true}>
