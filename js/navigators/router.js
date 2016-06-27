@@ -21,7 +21,7 @@ export default class AppRouter extends React.Component {
       <View>
         <StatusBar
          backgroundColor="#ff3333"
-         barStyle="default"
+         barStyle="light-content"
        />
       <Router scenes={scenes} />
       </View>
