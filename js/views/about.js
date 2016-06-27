@@ -9,6 +9,8 @@ import {
     Image
 } from 'react-native'
 
+import I18n from 'react-native-i18n'
+
 import NavigationBar from '../components/navigation-bar'
 
 export default class AboutView extends Component{
@@ -21,8 +23,8 @@ export default class AboutView extends Component{
     return (
       <View style={styles.container}>
         <NavigationBar
-          centerTitle={'About Tomato'}
-          leftTitle={'Back'}
+          centerTitle={I18n.t('about_tomato')}
+          leftTitle={I18n.t('back')}
           leftHandler={() => alert('hello')}
           />
       </View>
@@ -35,3 +37,16 @@ const styles = StyleSheet.create({
     flex: 1,
   }
 })
+
+I18n.fallbacks = true;
+I18n.translations = {
+  en: {
+    about_tomato: 'About Tomato',
+    back: 'Back',
+  },
+  zh: {
+    about_tomato: '关于番茄',
+    back: '返回',
+  }
+}
+I18n.locale = 'zh'
