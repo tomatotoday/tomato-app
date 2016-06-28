@@ -8,10 +8,12 @@ import {
 } from 'react-native-router-flux';
 
 import About from '../views/about'
+import Login from '../views/login'
 
 const scenes = Actions.create(
   <Scene key="root" hideNavBar={true}>
-    <Scene key="about" title="About" component={About} initial={true} />
+    <Scene key="about" title="About" component={About} initial={false} />
+    <Scene key="login" title="Login" component={Login} initial={true}/>
   </Scene>
 );
 
