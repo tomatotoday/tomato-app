@@ -29,13 +29,13 @@ function setup() {
       // Setup I18n
       I18n.fallbacks = true
       I18n.translations = Translations
+      I18n.locale = 'zh'
 
     }
 
     render() {
       return (
         <Provider store={ this.state.store }>
-
           <Router />
         </Provider>
       )
