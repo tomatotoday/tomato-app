@@ -30,6 +30,7 @@ export default class AboutView extends Component{
         <View style={styles.wrapper}>
           <View style={styles.appNameView}>
             <Text style={styles.appNameText}>{I18n.t('appName')}</Text>
+            <Text style={styles.appVersionText}>v0.1.0</Text>
           </View>
         </View>
       </View>
@@ -49,27 +50,12 @@ const styles = StyleSheet.create({
   appNameView: {
     marginTop: 50,
     backgroundColor: '#ffffff',
+    alignItems: 'center',
   },
   appNameText: {
     fontSize: 20,
   },
-})
-
-I18n.fallbacks = true;
-I18n.translations = {
-  en: {
-    aboutTomato: 'About Tomato',
-    back: 'Back',
-    appName: 'Tomato',
-    appInfo: 'Email: help@tomato.today',
-    appCopyright: 'Copyright © 2016 tomato.today.',
+  appVersionText: {
+    fontSize: 13,
   },
-  zh: {
-    aboutTomato: '关于番茄',
-    back: '返回',
-    appName: '番茄',
-    appInfo: '邮箱: help@tomato.today',
-    appCopyright: '版权 © 2016 tomato.today.',
-  }
-}
-I18n.locale = 'zh'
+})
