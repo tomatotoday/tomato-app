@@ -10,6 +10,8 @@ import {
     Image
 } from 'react-native'
 
+import {Actions} from 'react-native-router-flux'
+
 import I18n from 'react-native-i18n'
 
 import t from 'tcomb-form-native'
@@ -42,7 +44,7 @@ export default class LoginView extends Component{
     this.setState({value});
   }
 
-  onPress() {
+  onLogin() {
     var value = this.refs.form.getValue();
     if (value) {
       alert('Transfer email and password to server to login.')
@@ -52,11 +54,6 @@ export default class LoginView extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <NavigationBar
-          centerTitle={I18n.t('login')}
-          leftTitle={I18n.t('back')}
-          leftHandler={() => alert('Should Redirect to register page.')}
-          />
         <View style={styles.wrapper}>
           <Form
             ref="form"
@@ -64,9 +61,12 @@ export default class LoginView extends Component{
             options={{}}
             style={styles.form}
           />
-        <TouchableHighlight style={styles.button} onPress={this.onPress.bind(this)} underlayColor='#99d9f4'>
-            <Text style={styles.buttonText}>Save</Text>
+        <TouchableHighlight style={styles.button} onPress={ Actions.register } underlayColor='#ff0000'>
+            <Text style={styles.buttonText}>{ I18n.t('save')}</Text>
           </TouchableHighlight>
+          <Text onPress={ Actions.pop }>{ I18n.t('IDonotHaveAnAccount')}</Text>
+          <Text>|</Text>
+          <Text onPress={ Actions.forgotPassword}>{ I18n.t('forgotPassword')}</Text>
         </View>
       </View>
     )
@@ -78,16 +78,20 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   wrapper: {
-    marginTop: 70,
     marginLeft: 10,
     marginRight: 10,
   },
   form: {
     flex: 1,
   },
+  buttonText: {
+    fontSize: 18,
+    color: 'white',
+    alignSelf: 'center'
+  },
   button: {
     height: 36,
-    backgroundColor: '#ff3333',
+    backgroundColor: '#ee3333',
     borderColor: '#ff4444',
     borderWidth: 1,
     borderRadius: 8,
