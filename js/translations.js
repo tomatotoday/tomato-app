@@ -7,6 +7,8 @@ const translations = {
     appName: 'Tomato',
     appInfo: 'Email: help@tomato.today',
     appCopyright: 'Copyright © 2016 tomato.today.',
+    login: 'Login',
+    email: 'Email',
   },
   zh: {
     aboutTomato: '关于番茄',
@@ -14,6 +16,8 @@ const translations = {
     appName: '番茄',
     appInfo: '邮箱: help@tomato.today',
     appCopyright: '版权 © 2016 tomato.today.',
+    login: '登录',
+    email: '邮箱',
   }
 }
 module.exports = translations
