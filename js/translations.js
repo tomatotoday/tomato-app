@@ -9,6 +9,11 @@ const translations = {
     appCopyright: 'Copyright © 2016 tomato.today.',
     login: 'Login',
     email: 'Email',
+    register: 'Register',
+    save: 'Save',
+    IHaveAnAccount: 'I have an account already. Login.',
+    IDonotHaveAnAccount: "I don't have an account. Register.",
+    forgotPassword: 'Forgot Password',
   },
   zh: {
     aboutTomato: '关于番茄',
@@ -18,6 +23,11 @@ const translations = {
     appCopyright: '版权 © 2016 tomato.today.',
     login: '登录',
     email: '邮箱',
+    register: '注册',
+    save: '保存',
+    IHaveAnAccount: '已有帐号？去登录',
+    IDonotHaveAnAccount: '没有帐号？去注册',
+    forgotPassword: '忘记密码',
   }
 }
 module.exports = translations
